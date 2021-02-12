@@ -52,6 +52,7 @@ module.exports = {
 		"indent": "off",
 		"no-empty-function": "off",
 		"no-use-before-define": "off",
+		"no-redeclare": "off",
 		"@typescript-eslint/indent": [
 			"error",
 			"tab",
@@ -150,6 +151,8 @@ module.exports = {
 		],
 		"@typescript-eslint/type-annotation-spacing": "error",
 		"@typescript-eslint/unified-signatures": "error",
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"typescript-eslint/no-non-null-assertion": "off",
 		"arrow-body-style": [
 			"error",
 			"as-needed"
@@ -163,17 +166,14 @@ module.exports = {
 			"1tbs"
 		],
 		"comma-dangle": "error",
-		"complexity": [
-			"error",
-			5
-		],
+		"complexity": "off",
 		"template-curly-spacing": [
 			"error",
 			"never"
 		],
 		"curly": [
 			"error",
-			"multi"
+			"multi-line"
 		],
 		"eol-last": [
 			"error",
