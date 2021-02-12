@@ -153,6 +153,12 @@ module.exports = {
 		"@typescript-eslint/unified-signatures": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"@typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-misused-promises": [
+			"error",
+			{
+				"checksVoidReturn": false
+			}
+		],
 		"arrow-body-style": [
 			"error",
 			"as-needed"
@@ -281,6 +287,9 @@ module.exports = {
 				"requireStringLiterals": true
 			}
 		],
-		"deprecation/deprecation": "error"
+		"deprecation/deprecation": "error",
+		"keyword-spacing": [
+			"error"
+		]
 	}
 };
