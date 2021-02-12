@@ -152,7 +152,7 @@ module.exports = {
 		"@typescript-eslint/type-annotation-spacing": "error",
 		"@typescript-eslint/unified-signatures": "error",
 		"@typescript-eslint/explicit-module-boundary-types": "off",
-		"typescript-eslint/no-non-null-assertion": "off",
+		"@typescript-eslint/no-non-null-assertion": "off",
 		"arrow-body-style": [
 			"error",
 			"as-needed"
