@@ -298,6 +298,7 @@ module.exports = {
 		"object-curly-spacing": [
 			"error",
 			"always"
-		]
+		],
+		"no-invalid-this": "off"
 	}
 };
