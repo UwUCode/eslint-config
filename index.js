@@ -159,6 +159,7 @@ module.exports = {
 				"checksVoidReturn": false
 			}
 		],
+		"@typescript-eslint/require-await": "off",
 		"arrow-body-style": [
 			"error",
 			"as-needed"
@@ -290,6 +291,9 @@ module.exports = {
 		"deprecation/deprecation": "error",
 		"keyword-spacing": [
 			"error"
-		]
+		],
+		"one-var": "off",
+		"curly": "off",
+		"arrow-parens": "off"
 	}
 };
