@@ -294,6 +294,10 @@ module.exports = {
 		],
 		"one-var": "off",
 		"curly": "off",
-		"arrow-parens": "off"
+		"arrow-parens": "off",
+		"object-curly-spacing": [
+			"error",
+			"always"
+		]
 	}
 };
