@@ -299,6 +299,12 @@ module.exports = {
 			"error",
 			"always"
 		],
-		"no-invalid-this": "off"
+		"no-invalid-this": "off",
+		"prefer-arrow-callback": "off",
+		"no-invalid-this": "off",
+		"one-var": "off",
+		"curly": "off",
+		"arrow-parens": "off",
+		"prefer-arrow/prefer-arrow-functions": "off"
 	}
 };
