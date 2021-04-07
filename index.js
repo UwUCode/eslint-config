@@ -41,7 +41,6 @@ module.exports = {
 		"plugin:@typescript-eslint/recommended-requiring-type-checking"
 	],
 	"plugins": [
-		"deprecation",
 		"eslint-plugin-import",
 		"eslint-plugin-jsdoc",
 		"eslint-plugin-prefer-arrow",
@@ -160,6 +159,7 @@ module.exports = {
 			}
 		],
 		"@typescript-eslint/require-await": "off",
+		"@typescript-eslint/deprecation": "warn",
 		"arrow-body-style": [
 			"error",
 			"as-needed"
@@ -288,7 +288,6 @@ module.exports = {
 				"requireStringLiterals": true
 			}
 		],
-		"deprecation/deprecation": "error",
 		"keyword-spacing": [
 			"error"
 		],
