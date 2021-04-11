@@ -159,7 +159,7 @@ module.exports = {
 			}
 		],
 		"@typescript-eslint/require-await": "off",
-		"@typescript-eslint/deprecation": "warn",
+		"deprecation/deprecation": "warn",
 		"arrow-body-style": [
 			"error",
 			"as-needed"
