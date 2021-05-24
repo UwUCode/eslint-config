@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "My eslint config for my projects.",
   "main": "index.js",
   "files": [
@@ -31,6 +31,7 @@
     "@typescript-eslint/parser": "^4.24.0",
     "@uwu-codes/tsconfig": "^1.0.1",
     "eslint": "^7.27.0",
+    "eslint-plugin-deprecation": "^1.2.1",
     "eslint-plugin-import": "^2.23.3",
     "eslint-plugin-jsdoc": "^34.8.2",
     "eslint-plugin-json": "^3.0.0",
