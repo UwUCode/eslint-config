@@ -305,6 +305,23 @@ module.exports = {
 		"one-var": "off",
 		"curly": "off",
 		"arrow-parens": "off",
-		"prefer-arrow/prefer-arrow-functions": "off"
+		"prefer-arrow/prefer-arrow-functions": "off",
+		"no-underscore-dangle": "off",
+		"spaced-comment": [
+			"error",
+			"always",
+			{
+				"markers": [
+					"/"
+				]
+			}
+		],
+		"brace-style": [
+			"error",
+			"ltbs",
+			{
+				"allowSingleLine": true
+			}
+		]
 	}
 };
