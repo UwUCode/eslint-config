@@ -44,8 +44,7 @@ module.exports = {
 		"eslint-plugin-import",
 		"eslint-plugin-jsdoc",
 		"eslint-plugin-prefer-arrow",
-		"@typescript-eslint",
-		"deprecation"
+		"@typescript-eslint"
 	],
 	"rules": {
 		"dot-notation": "off",
@@ -160,7 +159,7 @@ module.exports = {
 			}
 		],
 		"@typescript-eslint/require-await": "off",
-		"deprecation/deprecation": "warn",
+		"@typescript-eslint/deprecation": ["warn"],
 		"arrow-body-style": [
 			"error",
 			"as-needed"
