@@ -317,7 +317,7 @@ module.exports = {
 		],
 		"brace-style": [
 			"error",
-			"ltbs",
+			"1tbs",
 			{
 				"allowSingleLine": true
 			}
