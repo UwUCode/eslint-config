@@ -160,7 +160,38 @@ module.exports = {
 			}
 		],
 		"@typescript-eslint/require-await": "off",
+		"@typescript-eslint/consistent-indexed-object-style": [
+			"error",
+			"record"
+		],
+		"@typescript-eslint/consistent-type-definitions": [
+			"error",
+			"interface"
+		],
+		"@typescript-eslint/consistent-type-assertions": [
+			"error",
+			{
+				"assertionStyle": "as"
+			}
+		],
+		"@typescript-eslint/method-signature-style": [
+			"error",
+			"method"
+		],
+		"@typescript-eslint/prefer-includes": "error",
+		"@typescript-eslint/prefer-function-type": "error",
+		"@typescript-eslint/no-shadow": "error",
 		"deprecation/deprecation": ["warn"],
+		"space-infix-ops": "error",
+		"no-shadow": "off",
+		"import/no-extraneous-dependencies": "off",
+		"no-inner-declarations": "off",
+		"key-spacing": [
+			"error",
+			{
+				"mode": "strict"
+			}
+		],
 		"arrow-body-style": [
 			"error",
 			"as-needed"
