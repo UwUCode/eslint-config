@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "My eslint config for my projects.",
   "main": "index.js",
   "files": [
@@ -33,6 +33,7 @@
     "eslint": "^8.0.1",
     "eslint-plugin-deprecation": "^1.2.1",
     "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import-newlines": "^1.1.5",
     "eslint-plugin-jsdoc": "^36.1.1",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",

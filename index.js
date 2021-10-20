@@ -46,7 +46,8 @@ module.exports = {
     "eslint-plugin-prefer-arrow",
     "@typescript-eslint",
     "deprecation",
-    "jsdoc"
+    "jsdoc",
+	"import-newlines"
   ],
   "rules": {
     "dot-notation": "off",
@@ -315,6 +316,10 @@ module.exports = {
         "disallowTypeAnnotations": true
       }
     ],
-	"@typescript-eslint/no-duplicate-imports": "error"
+	"@typescript-eslint/no-duplicate-imports": "error",
+	"import-newlines/enforce": [
+            "error",
+			4
+	]
   }
 };
