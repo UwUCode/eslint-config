@@ -240,7 +240,7 @@ module.exports = {
     "no-console": "off",
     "no-debugger": "error",
     "no-duplicate-case": "error",
-    "no-duplicate-imports": "error",
+    "no-duplicate-imports": "off",
     "no-empty": "error",
     "no-eval": "error",
     "no-extra-bind": "error",
@@ -314,6 +314,7 @@ module.exports = {
         "prefer": "type-imports",
         "disallowTypeAnnotations": true
       }
-    ]
+    ],
+	"@typescript-eslint/no-duplicate-imports": "error"
   }
 };
