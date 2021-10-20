@@ -45,7 +45,8 @@ module.exports = {
 		"eslint-plugin-jsdoc",
 		"eslint-plugin-prefer-arrow",
 		"@typescript-eslint",
-		"deprecation"
+		"deprecation",
+		"jsdoc"
 	],
 	"rules": {
 		"dot-notation": "off",
@@ -353,6 +354,7 @@ module.exports = {
 			{
 				"allowSingleLine": true
 			}
-		]
+		],
+		"jsdoc/no-undefined-types": "on"
 	}
 };
