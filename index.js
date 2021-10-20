@@ -299,7 +299,7 @@ module.exports = {
       "error",
       "always"
     ],
-    "jsdoc/no-undefined-types": "on",
+    "jsdoc/no-undefined-types": "error",
     "@typescript-eslint/consistent-indexed-object-style": [
       "error",
       "record"
