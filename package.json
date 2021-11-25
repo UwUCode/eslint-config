@@ -1,10 +1,10 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "My eslint config for my projects.",
   "main": "index.js",
   "files": [
-    "./index.js"
+    "index.js"
   ],
   "scripts": {
     "lint": "eslint . --ext .ts --fix"
@@ -31,7 +31,6 @@
     "@typescript-eslint/parser": "^5.1.0",
     "@uwu-codes/tsconfig": "^1.0.1",
     "eslint": "^8.0.1",
-    "eslint-plugin-deprecation": "github:DonovanDMC/eslint-plugin-deprecation",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-import-newlines": "^1.1.5",
     "eslint-plugin-jsdoc": "^36.1.1",
