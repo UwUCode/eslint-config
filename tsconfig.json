@@ -3,6 +3,6 @@
 	"compilerOptions": {
 		"rootDir": ".",
 		"outDir": "./build",
-		"baseUrl": "src"
+		"baseUrl": "lib"
 	}
 }
