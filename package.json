@@ -1,14 +1,11 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.0.29",
+  "version": "1.0.31",
   "description": "My eslint config for my projects.",
-  "main": "index.js",
+  "main": "ts.json",
   "files": [
-    "index.js",
-    "js",
-    "ts",
-    "lib/javascript.js",
-    "lib/typescript.js"
+    "js.json",
+    "ts.json"
   ],
   "scripts": {
     "lint": "eslint . --ext .ts --fix"

@@ -1,46 +1,46 @@
-module.exports = {
-	env: {
-		node: true,
-		es6: true
+{
+	"env": {
+		"node": true,
+		"es6": true
 	},
-	parser: "@typescript-eslint/parser",
-	parserOptions: {
-		ecmaVersion: 2020,
-		sourceType: "module",
-		project: "./tsconfig.json",
-		ecmaFeatures: {
-			jsx: false,
-			forOf: true,
-			spread: true,
-			modules: true,
-			classes: true,
-			generators: true,
-			restParams: true,
-			regexUFlag: true,
-			regexYFlag: true,
-			globalReturn: true,
-			destructuring: true,
-			impliedStrict: true,
-			blockBindings: true,
-			defaultParams: true,
-			octalLiterals: true,
-			arrowFunctions: true,
-			binaryLiterals: true,
-			templateStrings: true,
-			superInFunctions: true,
-			unicodeCodePointEscapes: true,
-			objectLiteralShorthandMethods: true,
-			objectLiteralComputedProperties: true,
-			objectLiteralDuplicateProperties: true,
-			objectLiteralShorthandProperties: true
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"project": "./tsconfig.json",
+		"ecmaFeatures": {
+			"jsx": false,
+			"forOf": true,
+			"spread": true,
+			"modules": true,
+			"classes": true,
+			"generators": true,
+			"restParams": true,
+			"regexUFlag": true,
+			"regexYFlag": true,
+			"globalReturn": true,
+			"destructuring": true,
+			"impliedStrict": true,
+			"blockBindings": true,
+			"defaultParams": true,
+			"octalLiterals": true,
+			"arrowFunctions": true,
+			"binaryLiterals": true,
+			"templateStrings": true,
+			"superInFunctions": true,
+			"unicodeCodePointEscapes": true,
+			"objectLiteralShorthandMethods": true,
+			"objectLiteralComputedProperties": true,
+			"objectLiteralDuplicateProperties": true,
+			"objectLiteralShorthandProperties": true
 		}
 	},
-	extends: [
+	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking"
 	],
-	plugins: [
+	"plugins": [
 		"eslint-plugin-import",
 		"eslint-plugin-jsdoc",
 		"eslint-plugin-prefer-arrow",
@@ -48,7 +48,7 @@ module.exports = {
 		"jsdoc",
 		"import-newlines"
 	],
-	rules: {
+	"rules": {
 		"dot-notation": "off",
 		"indent": "off",
 		"no-empty-function": "off",
@@ -58,20 +58,20 @@ module.exports = {
 			"error",
 			"tab",
 			{
-				SwitchCase: 1
+				"SwitchCase": 1
 			}
 		],
 		"@typescript-eslint/adjacent-overload-signatures": "error",
 		"@typescript-eslint/array-type": [
 			"error",
 			{
-				default: "generic"
+				"default": "generic"
 			}
 		],
 		"@typescript-eslint/consistent-type-assertions": [
 			"error",
 			{
-				assertionStyle: "as"
+				"assertionStyle": "as"
 			}
 		],
 		"@typescript-eslint/dot-notation": [
@@ -80,26 +80,26 @@ module.exports = {
 		"@typescript-eslint/explicit-member-accessibility": [
 			"error",
 			{
-				accessibility: "no-public"
+				"accessibility": "no-public"
 			}
 		],
 		"@typescript-eslint/member-delimiter-style": [
 			"error",
 			{
-				multiline: {
-					delimiter: "semi",
-					requireLast: true
+				"multiline": {
+					"delimiter": "semi",
+					"requireLast": true
 				},
-				singleline: {
-					delimiter: "semi",
-					requireLast: true
+				"singleline": {
+					"delimiter": "semi",
+					"requireLast": true
 				}
 			}
 		],
 		"@typescript-eslint/no-empty-function": [
 			"error",
 			{
-				allow: [
+				"allow": [
 					"arrowFunctions"
 				]
 			}
@@ -112,8 +112,8 @@ module.exports = {
 		"@typescript-eslint/no-this-alias": [
 			"error",
 			{
-				allowDestructuring: true,
-				allowedNames: [
+				"allowDestructuring": true,
+				"allowedNames": [
 					"self"
 				]
 			}
@@ -130,7 +130,7 @@ module.exports = {
 			"error",
 			"double",
 			{
-				avoidEscape: true
+				"avoidEscape": true
 			}
 		],
 		"@typescript-eslint/semi": [
@@ -140,9 +140,9 @@ module.exports = {
 		"@typescript-eslint/triple-slash-reference": [
 			"error",
 			{
-				path: "never",
-				types: "prefer-import",
-				lib: "always"
+				"path": "never",
+				"types": "prefer-import",
+				"lib": "always"
 			}
 		],
 		"@typescript-eslint/type-annotation-spacing": "error",
@@ -152,7 +152,7 @@ module.exports = {
 		"@typescript-eslint/no-misused-promises": [
 			"error",
 			{
-				checksVoidReturn: false
+				"checksVoidReturn": false
 			}
 		],
 		"@typescript-eslint/require-await": "off",
@@ -169,7 +169,7 @@ module.exports = {
 		"key-spacing": [
 			"error",
 			{
-				mode: "strict"
+				"mode": "strict"
 			}
 		],
 		"arrow-body-style": [
@@ -181,7 +181,7 @@ module.exports = {
 			"error",
 			"1tbs",
 			{
-				allowSingleLine: true
+				"allowSingleLine": true
 			}
 		],
 		"comma-dangle": "error",
@@ -198,9 +198,9 @@ module.exports = {
 		"no-multiple-empty-lines": [
 			"error",
 			{
-				max: 2,
-				maxBOF: 1,
-				maxEOF: 1
+				"max": 2,
+				"maxBOF": 1,
+				"maxEOF": 1
 			}
 		],
 		"eqeqeq": [
@@ -211,7 +211,7 @@ module.exports = {
 		"import/order": [
 			"error",
 			{
-				groups: [
+				"groups": [
 					"index",
 					"sibling",
 					"parent",
@@ -277,7 +277,7 @@ module.exports = {
 			"error",
 			"always",
 			{
-				markers: [
+				"markers": [
 					"/"
 				]
 			}
@@ -286,7 +286,7 @@ module.exports = {
 		"valid-typeof": [
 			"error",
 			{
-				requireStringLiterals: true
+				"requireStringLiterals": true
 			}
 		],
 		"keyword-spacing": [
@@ -308,8 +308,8 @@ module.exports = {
 		"@typescript-eslint/consistent-type-imports": [
 			"error",
 			{
-				prefer: "type-imports",
-				disallowTypeAnnotations: true
+				"prefer": "type-imports",
+				"disallowTypeAnnotations": true
 			}
 		],
 		"@typescript-eslint/no-duplicate-imports": "error",
@@ -318,4 +318,4 @@ module.exports = {
 			4
 		]
 	}
-};
+}
