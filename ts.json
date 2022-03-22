@@ -169,7 +169,7 @@
 		"key-spacing": [
 			"error",
 			{
-				"mode": "strict"
+				"align": "value"
 			}
 		],
 		"arrow-body-style": [
