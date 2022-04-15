@@ -47,7 +47,8 @@
 		"@typescript-eslint",
 		"jsdoc",
 		"import-newlines",
-		"unused-imports"
+		"unused-imports",
+		"sort-keys-fix"
 	],
 	"rules": {
 		"@typescript-eslint/adjacent-overload-signatures": "error",
@@ -319,6 +320,14 @@
 			"error",
 			{
 				"requireStringLiterals": true
+			}
+		],
+		"sort-keys-fix/sort-keys-fix": [
+			"error",
+			"asc",
+			{
+				"caseSensitive": true,
+				"natural": true
 			}
 		]
 	}
