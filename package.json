@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "My eslint config for my projects.",
   "main": "ts.json",
   "files": [
@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
     "typescript": "^4.6.3"
   }
 }
