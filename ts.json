@@ -47,8 +47,7 @@
 		"@typescript-eslint",
 		"jsdoc",
 		"import-newlines",
-		"unused-imports",
-		"sort-class-members"
+		"unused-imports"
 	],
 	"rules": {
 		"@typescript-eslint/adjacent-overload-signatures": "error",
@@ -320,20 +319,6 @@
 			"error",
 			{
 				"requireStringLiterals": true
-			}
-		],
-		"sort-class-members/sort-class-members": [
-			2,
-			{
-				"order": [
-					"[static-properties]",
-					"[conventional-private-properties]",
-					"[properties]",
-					"constructor",
-					"[static-methods]",
-					"[methods]",
-					"[conventional-private-methods]"
-				]
 			}
 		]
 	}
