@@ -6,8 +6,7 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:@typescript-eslint/recommended-requiring-type-checking",
-		"plugin:typescript-sort-keys/recommended"
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -49,7 +48,7 @@
 		"jsdoc",
 		"import-newlines",
 		"unused-imports",
-		"typescript-sort-keys"
+		"sort-class-members"
 	],
 	"rules": {
 		"@typescript-eslint/adjacent-overload-signatures": "error",
@@ -323,13 +322,18 @@
 				"requireStringLiterals": true
 			}
 		],
-		"sort-keys": [
-			"error",
-			"asc",
+		"sort-class-members/sort-class-members": [
+			2,
 			{
-				"caseSensitive": true,
-				"natural": false,
-				"minKeys": 2
+				"order": [
+					"[static-properties]",
+					"[conventional-private-properties]",
+					"[properties]",
+					"constructor",
+					"[static-methods]",
+					"[methods]",
+					"[conventional-private-methods]"
+				]
 			}
 		]
 	}
