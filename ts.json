@@ -331,14 +331,6 @@
 				"natural": false,
 				"minKeys": 2
 			}
-		],
-		"sort-keys-fix/sort-keys-fix": [
-			"error",
-			"asc",
-			{
-				"caseSensitive": true,
-				"natural": true
-			}
 		]
 	}
 }
