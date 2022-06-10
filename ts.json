@@ -323,21 +323,6 @@
 		],
 		"@typescript-eslint/no-redeclare": [
 			"error"
-		],
-		"sort-class-members/sort-class-members": [
-			2,
-			{
-				"order": [
-					"[static-properties]",
-					"[properties]",
-					"[conventional-private-properties]",
-					"constructor",
-					"[static-methods]",
-					"[methods]",
-					"[conventional-private-methods]"
-				],
-				"accessorPairPositioning": "getThenSet"
-			}
 		]
 	}
 }
