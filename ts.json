@@ -79,7 +79,10 @@
 			}
 		],
 		"@typescript-eslint/dot-notation": [
-			"error"
+			"error",
+			{
+				"allowPrivateClassPropertyAccess": true
+			}
 		],
 		"@typescript-eslint/explicit-member-accessibility": [
 			"error",
