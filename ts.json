@@ -81,7 +81,8 @@
 		"@typescript-eslint/dot-notation": [
 			"error",
 			{
-				"allowPrivateClassPropertyAccess": true
+				"allowPrivateClassPropertyAccess": true,
+				"allowProtectedClassPropertyAccess": true
 			}
 		],
 		"@typescript-eslint/explicit-member-accessibility": [
