@@ -1,46 +1,46 @@
 {
-  "name": "@uwu-codes/eslint-config",
-  "version": "1.0.55",
-  "description": "My eslint config for my projects.",
-  "main": "ts.json",
-  "files": [
-    "js.json",
-    "ts.json"
-  ],
-  "scripts": {
-    "lint": "eslint . --ext .ts --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UwUCode/eslint-config.git"
-  },
-  "author": "Donovan_DMC",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/UwUCode/eslint-config/issues"
-  },
-  "homepage": "https://github.com/UwUCode/eslint-config#readme",
-  "engines": {
-    "node": ">=15"
-  },
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.30.7",
-    "@typescript-eslint/parser": "^5.30.7",
-    "@uwu-codes/tsconfig": "^1.0.1",
-    "eslint": "^8.20.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-import-newlines": "^1.2.3",
-    "eslint-plugin-jsdoc": "^39.3.3",
-    "eslint-plugin-json": "^3.1.0",
-    "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-unused-imports": "^2.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.0.6",
-    "typescript": "^4.7.4"
-  }
+    "name": "@uwu-codes/eslint-config",
+    "version": "1.1.0",
+    "description": "My eslint config for my projects.",
+    "main": "ts.json",
+    "files": [
+        "js.json",
+        "ts.json"
+    ],
+    "scripts": {
+        "lint": "eslint . --ext .ts --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/UwUCode/eslint-config.git"
+    },
+    "author": "Donovan_DMC",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/UwUCode/eslint-config/issues"
+    },
+    "homepage": "https://github.com/UwUCode/eslint-config#readme",
+    "engines": {
+        "node": ">=15"
+    },
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.40.0",
+        "@typescript-eslint/parser": "^5.40.0",
+        "@uwu-codes/tsconfig": "^1.0.1",
+        "eslint": "^8.25.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-import-newlines": "^1.2.3",
+        "eslint-plugin-jsdoc": "^39.3.6",
+        "eslint-plugin-json": "^3.1.0",
+        "eslint-plugin-prefer-arrow": "^1.2.3",
+        "eslint-plugin-unused-imports": "^2.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.8.5",
+        "typescript": "^4.8.4"
+    }
 }
