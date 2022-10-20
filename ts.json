@@ -262,6 +262,11 @@
             "error",
             "always"
         ],
+        "curly": "error",
+        "object-curly-newline": [
+            "error",
+            "always"
+        ],
         "object-shorthand": "error",
         "one-var": "off",
         "prefer-arrow-callback": "off",
@@ -325,9 +330,6 @@
                         "private-constructor",
                         "protected-constructor",
                         "constructor",
-                        "private-get",
-                        "protected-get",
-                        "get",
                         "private-set",
                         "protected-set",
                         "set",
@@ -336,6 +338,9 @@
                         "static-method",
                         "private-method",
                         "protected-method",
+                        "private-get",
+                        "protected-get",
+                        "get",
                         "method"
                     ],
                     "order": "alphabetically"
@@ -357,10 +362,6 @@
         "arrow-parens": [
             "error",
             "as-needed"
-        ],
-        "import/extensions": [
-            "error",
-            "ignorePackages"
         ],
         "unicorn/no-null": "off",
         "unicorn/no-static-only-class": "off",

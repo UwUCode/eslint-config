@@ -1,0 +1,9 @@
+{
+    "extends": "./ts.json",
+    "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages"
+        ]
+    }
+}
