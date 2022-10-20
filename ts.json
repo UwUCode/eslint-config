@@ -263,10 +263,6 @@
             "always"
         ],
         "curly": "error",
-        "object-curly-newline": [
-            "error",
-            "always"
-        ],
         "object-shorthand": "error",
         "one-var": "off",
         "prefer-arrow-callback": "off",
