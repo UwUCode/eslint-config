@@ -386,6 +386,7 @@
     ],
     "unicorn/catch-error-name": "off",
     "unicorn/consistent-destructuring": "off",
-    "unicorn/prefer-number-properties": "off"
+    "unicorn/prefer-number-properties": "off",
+    "unicorn/no-array-callback-reference": "off"
   }
 }
