@@ -331,6 +331,9 @@
             "private-constructor",
             "protected-constructor",
             "constructor",
+            "private-get",
+            "protected-get",
+            "get",
             "private-set",
             "protected-set",
             "set",
@@ -339,9 +342,6 @@
             "static-method",
             "private-method",
             "protected-method",
-            "private-get",
-            "protected-get",
-            "get",
             "method"
           ],
           "order": "alphabetically"
