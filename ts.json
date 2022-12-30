@@ -325,7 +325,6 @@
             "protected-field",
             "field",
             "abstract-field",
-            "private-abstract-method",
             "protected-abstract-method",
             "abstract-method",
             "private-constructor",
@@ -344,7 +343,7 @@
             "protected-method",
             "method"
           ],
-          "order": "alphabetically"
+          "order": "natural-case-insensitive"
         }
       }
     ],
