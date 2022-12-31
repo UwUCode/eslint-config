@@ -156,6 +156,12 @@
     ],
     "@typescript-eslint/type-annotation-spacing": "error",
     "@typescript-eslint/unified-signatures": "error",
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "fixStyle": "inline-type-imports"
+      }
+    ],
     "arrow-body-style": [
       "error",
       "as-needed"
@@ -342,8 +348,7 @@
             "private-method",
             "protected-method",
             "method"
-          ],
-          "order": "natural-case-insensitive"
+          ]
         }
       }
     ],
