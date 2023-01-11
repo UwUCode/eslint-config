@@ -392,6 +392,7 @@
     "unicorn/consistent-destructuring": "off",
     "unicorn/prefer-number-properties": "off",
     "unicorn/no-array-callback-reference": "off",
-    "unicorn/no-process-exit": "off"
+    "unicorn/no-process-exit": "off",
+    "import/no-unresolved": "off"
   }
 }
