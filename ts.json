@@ -7,7 +7,8 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "plugin:import/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -103,7 +104,6 @@
       "error",
       "method"
     ],
-    "@typescript-eslint/no-duplicate-imports": "error",
     "@typescript-eslint/no-empty-function": [
       "error",
       {
@@ -186,7 +186,6 @@
       "error",
       4
     ],
-    "import/no-extraneous-dependencies": "off",
     "import/order": [
       "error",
       {
@@ -392,6 +391,7 @@
     "unicorn/catch-error-name": "off",
     "unicorn/consistent-destructuring": "off",
     "unicorn/prefer-number-properties": "off",
-    "unicorn/no-array-callback-reference": "off"
+    "unicorn/no-array-callback-reference": "off",
+    "unicorn/no-process-exit": "off"
   }
 }
