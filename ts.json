@@ -422,7 +422,6 @@
     "unicorn/no-array-callback-reference": "off",
     "unicorn/no-process-exit": "off",
     "import/no-unresolved": "off",
-    "unicorn/prefer-math-trunc": "off",
-    "@typescript-eslint/no-import-type-side-effects": "warn"
+    "unicorn/prefer-math-trunc": "off"
   }
 }

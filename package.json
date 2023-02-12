@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "description": "My eslint config for my projects.",
   "main": "ts.json",
   "files": [
