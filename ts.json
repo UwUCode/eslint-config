@@ -331,13 +331,16 @@
             "private-field",
             "protected-field",
             "field",
-            "protected-abstract-get",
-            "protected-abstract-set",
-            "protected-abstract-method",
+            "abstract-field",
+            [
+              "protected-abstract-get",
+              "protected-abstract-set"
+            ],
             [
               "abstract-get",
               "abstract-set"
             ],
+            "protected-abstract-method",
             "abstract-method",
             "private-constructor",
             "protected-constructor",
@@ -357,8 +360,6 @@
             "private-static-method",
             "protected-static-method",
             "static-method",
-            "private-method",
-            "protected-method",
             [
               "private-get",
               "private-set"
@@ -371,6 +372,8 @@
               "get",
               "set"
             ],
+            "private-method",
+            "protected-method",
             "method"
           ],
           "order": "alphabetically"
