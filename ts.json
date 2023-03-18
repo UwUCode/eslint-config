@@ -376,7 +376,7 @@
             "protected-method",
             "method"
           ],
-          "order": "natural-case-insensitive"
+          "order": "alphabetically-case-insensitive"
         }
       }
     ],
