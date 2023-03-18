@@ -322,7 +322,6 @@
       {
         "default": {
           "memberTypes": [
-            "static-initialization",
             "signature",
             "call-signature",
             "private-static-field",
@@ -342,6 +341,7 @@
             ],
             "protected-abstract-method",
             "abstract-method",
+            "static-initialization",
             "private-constructor",
             "protected-constructor",
             "constructor",
@@ -376,7 +376,7 @@
             "protected-method",
             "method"
           ],
-          "order": "alphabetically"
+          "order": "natural-case-insensitive"
         }
       }
     ],
