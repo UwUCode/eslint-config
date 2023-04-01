@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "1.1.23",
+  "version": "1.1.24",
   "description": "My eslint config for my projects.",
   "main": "ts.json",
   "files": [
@@ -36,20 +36,20 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.51.0",
-    "@typescript-eslint/parser": "^5.51.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "@uwu-codes/tsconfig": "^1.0.7",
-    "eslint": "^8.34.0",
+    "eslint": "^8.37.0",
     "eslint-plugin-import": "npm:eslint-plugin-i@^2.27.5",
-    "eslint-plugin-import-newlines": "^1.3.0",
-    "eslint-plugin-jsdoc": "^40.0.0",
+    "eslint-plugin-import-newlines": "^1.3.1",
+    "eslint-plugin-jsdoc": "^40.1.1",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-unicorn": "^45.0.2",
+    "eslint-plugin-unicorn": "^46.0.0",
     "eslint-plugin-unused-imports": "^2.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.13.0",
-    "typescript": "^4.9.5"
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
   }
 }
