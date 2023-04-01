@@ -40,7 +40,7 @@
     "@typescript-eslint/parser": "^5.51.0",
     "@uwu-codes/tsconfig": "^1.0.7",
     "eslint": "^8.34.0",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import": "npm:eslint-plugin-i@^2.27.5",
     "eslint-plugin-import-newlines": "^1.3.0",
     "eslint-plugin-jsdoc": "^40.0.0",
     "eslint-plugin-json": "^3.1.0",
