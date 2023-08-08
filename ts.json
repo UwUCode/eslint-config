@@ -393,9 +393,12 @@
         "SwitchCase": 1
       }
     ],
-    "jsdoc/newline-after-description": [
+    "jsdoc/tag-lines": [
       "error",
-      "never"
+      "any",
+      {
+        "startLines": 1
+      }
     ],
     "arrow-parens": [
       "error",
