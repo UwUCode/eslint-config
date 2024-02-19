@@ -254,7 +254,6 @@
     "no-new-func": "error",
     "no-new-wrappers": "error",
     "no-redeclare": "off",
-    "no-return-await": "error",
     "no-sequences": "error",
     "no-shadow": "off",
     "no-sparse-arrays": "error",
@@ -413,8 +412,16 @@
         "onlyIfContainsSeparator": true
       }
     ],
-    "unicorn/filename-case": "off",
-    "unicorn/prevent-abbreviations": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true
+        }
+      }
+    ],
+    "unicorn/prevent-abbreviations": "warn",
     "unicorn/no-await-expression-member": "off",
     "unicorn/no-array-reduce": "off",
     "unicorn/prefer-spread": "off",
@@ -428,9 +435,11 @@
     "unicorn/consistent-destructuring": "off",
     "unicorn/prefer-number-properties": "off",
     "unicorn/no-array-callback-reference": "off",
-    "unicorn/no-process-exit": "off",
-    "import/no-unresolved": "off",
-    "unicorn/prefer-math-trunc": "off",
-    "unicorn/switch-case-braces": "off"
+    "unicorn/no-process-exit": "warn",
+    "import/no-unresolved": "error",
+    "unicorn/prefer-math-trunc": "error",
+    "unicorn/switch-case-braces": "off",
+    "@typescript-eslint/no-unsafe-declaration-merging": "off",
+    "@typescript-eslint/no-unsafe-enum-comparison": "off"
   }
 }
