@@ -20,6 +20,7 @@ export default defineConfig(
     },
     js.configs.recommended,
     ...typeCheckedConfigs,
+    tseslint.configs.stylisticTypeChecked,
     stylistic.configs.customize({
         indent: 4,
         quotes: "double",
@@ -60,6 +61,7 @@ export default defineConfig(
                     requireLast: false,
                 },
             }],
+            "@typescript-eslint/array-type": ["error", { default: "generic" }],
             "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
             "@typescript-eslint/consistent-type-assertions": [
                 "error",
