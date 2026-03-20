@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import stylistic from "@stylistic/eslint-plugin";
 import { defineConfig } from "eslint/config";
 import importPlugin from "eslint-plugin-import";
 import unicorn from "eslint-plugin-unicorn";
@@ -9,6 +10,7 @@ import tseslint from "typescript-eslint";
 const files = ["**/*.ts", "**/*.mts", "**/*.cts"];
 const typeCheckedConfigs = tseslint.configs.strictTypeChecked.map(config => ({
     ...config,
+
     files,
 }));
 
@@ -18,6 +20,7 @@ export default defineConfig(
     },
     js.configs.recommended,
     ...typeCheckedConfigs,
+    stylistic.configs.recommended,
     {
         files,
         languageOptions: {
@@ -32,11 +35,19 @@ export default defineConfig(
             },
         },
         plugins: {
-            import: importPlugin,
+            "@stylistic": stylistic,
+            "import": importPlugin,
             unicorn,
             "unused-imports": unusedImports,
         },
         rules: {
+            "@stylistic/quotes": ["error", "double"],
+            "@stylistic/quote-props": ["error", "consistent-as-needed"],
+            "@stylistic/semi": ["error", "always"],
+            "@stylistic/indent": ["error", 4],
+            "@stylistic/comma-dangle": ["error", "always-multiline"],
+            "@stylistic/eol-last": ["error", "always"],
+            "@stylistic/max-statements-per-line": ["error", { max: 2 }],
             "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
             "@typescript-eslint/consistent-type-assertions": [
                 "error",
@@ -61,8 +72,8 @@ export default defineConfig(
                     allowDirectConstAssertionInArrowFunctions: true,
                     allowConciseArrowFunctionExpressionsStartingWithVoid: false,
                     allowFunctionsWithoutTypeParameters: false,
-                    allowIIFEs: true
-                }
+                    allowIIFEs: true,
+                },
             ],
             "@typescript-eslint/explicit-module-boundary-types": [
                 "error",
@@ -71,8 +82,8 @@ export default defineConfig(
                     allowDirectConstAssertionInArrowFunctions: true,
                     allowHigherOrderFunctions: true,
                     allowTypedFunctionExpressions: true,
-                    allowOverloadFunctions: false
-                }
+                    allowOverloadFunctions: false,
+                },
             ],
             "@typescript-eslint/member-ordering": [
                 "error",
@@ -124,7 +135,7 @@ export default defineConfig(
                 {
                     allow: [
                         "arrowFunctions",
-                        "overrideMethods"
+                        "overrideMethods",
                     ],
                 },
             ],
@@ -138,7 +149,7 @@ export default defineConfig(
                     allowNever: true,
                     allowNullish: true,
                     allowNumber: true,
-                }
+                },
             ],
             "@typescript-eslint/no-unnecessary-condition": [
                 "error",
@@ -149,17 +160,17 @@ export default defineConfig(
             "import/order": [
                 "error",
                 {
-                    alphabetize: {
+                    "alphabetize": {
                         caseInsensitive: true,
                         order: "asc",
                     },
                     "newlines-between": "always",
-                    groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+                    "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
                 },
             ],
             "import/extensions": [
                 "error",
-                "ignorePackages"
+                "ignorePackages",
             ],
             "unused-imports/no-unused-imports": "error",
             "unused-imports/no-unused-vars": [
@@ -174,11 +185,11 @@ export default defineConfig(
             "unicorn/filename-case": [
                 "error",
                 {
-                    "cases": {
-                    "camelCase": true,
-                    "pascalCase": true
-                    }
-                }
+                    cases: {
+                        camelCase: true,
+                        pascalCase: true,
+                    },
+                },
             ],
             "unicorn/no-null": "off",
             "unicorn/no-process-exit": "off",
@@ -190,5 +201,5 @@ export default defineConfig(
             "unicorn/prefer-export-from": "warn",
             "unicorn/prefer-import-meta-properties": "error",
         },
-    }
+    },
 );

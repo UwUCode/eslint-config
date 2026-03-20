@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "My eslint config for my projects.",
   "packageManager": "bun@1.3.10",
   "module": "dist/eslint.config.mjs",
@@ -38,6 +38,7 @@
     "eslint": "^9.39.4",
     "globals": "^16.5.0",
     "eslint-plugin-import": "^2.32.0",
+    "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-unicorn": "^59.0.1",
     "eslint-plugin-unused-imports": "^4.4.1",
     "typescript-eslint": "^8.57.1"
