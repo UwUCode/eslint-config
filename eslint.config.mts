@@ -20,7 +20,14 @@ export default defineConfig(
     },
     js.configs.recommended,
     ...typeCheckedConfigs,
-    stylistic.configs.recommended,
+    stylistic.configs.customize({
+        indent: 4,
+        quotes: "double",
+        semi: true,
+        braceStyle: "1tbs",
+        quoteProps: "consistent-as-needed",
+        commaDangle: "always-multiline",
+    }),
     {
         files,
         languageOptions: {
@@ -41,13 +48,18 @@ export default defineConfig(
             "unused-imports": unusedImports,
         },
         rules: {
-            "@stylistic/quotes": ["error", "double"],
-            "@stylistic/quote-props": ["error", "consistent-as-needed"],
-            "@stylistic/semi": ["error", "always"],
-            "@stylistic/indent": ["error", 4],
-            "@stylistic/comma-dangle": ["error", "always-multiline"],
             "@stylistic/eol-last": ["error", "always"],
             "@stylistic/max-statements-per-line": ["error", { max: 2 }],
+            "@stylistic/member-delimiter-style": ["error", {
+                multiline: {
+                    delimiter: "semi",
+                    requireLast: true,
+                },
+                singleline: {
+                    delimiter: "semi",
+                    requireLast: false,
+                },
+            }],
             "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
             "@typescript-eslint/consistent-type-assertions": [
                 "error",
