@@ -1,0 +1,28 @@
+name: Publish
+permissions:
+  contents: read
+  id-token: write
+on:
+  workflow_dispatch:
+  workflow_call:
+  release:
+    types: [released]
+
+jobs:
+  lint:
+    name: Lint
+    uses: ./.github/workflows/lint.yml
+  build:
+    name: Build
+    uses: ./.github/workflows/build.yml
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: oven-sh/setup-bun@v2
+      - run: npm i -g npm@"^11.5" # # Needed for OIDC
+      - run: bun i --frozen-lockfile --ignore-scripts
+      - run: npm publish

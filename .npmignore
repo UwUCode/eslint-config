@@ -1,1 +1,4 @@
-!.eslintrc.json
+*
+!/dist
+!/LICENSE
+!/README.md
