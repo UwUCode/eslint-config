@@ -15,7 +15,7 @@
     "build": "bun build eslint.config.mts --target=node --format=esm --outfile=dist/eslint.config.mjs --packages external && tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "version=$(jq -r .version package.json) && gh release create v$version --title \"$version\" --fail-on-no-commits --verify-tag --notes \"no new commits since the last release\""
+    "release": "./release.sh"
   },
   "repository": {
     "type": "git",
