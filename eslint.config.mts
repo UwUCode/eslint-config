@@ -173,6 +173,7 @@ export default defineConfig(
             ],
             "@typescript-eslint/no-empty-object-type": "off",
             "@typescript-eslint/no-unsafe-declaration-merging": "off",
+            "@typescript-eslint/no-extraneous-class": "off",
             "import/order": [
                 "error",
                 {
