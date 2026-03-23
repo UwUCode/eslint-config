@@ -61,6 +61,7 @@ export default defineConfig(
                     requireLast: false,
                 },
             }],
+            "@stylistic/multiline-ternary": "off",
             "@typescript-eslint/array-type": ["error", { default: "generic" }],
             "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
             "@typescript-eslint/consistent-type-assertions": [
