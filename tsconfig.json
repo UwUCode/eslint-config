@@ -27,6 +27,6 @@
     "emitDeclarationOnly": true,
     "outDir": "dist"
   },
-  "include": ["eslint.config.mts"],
+  "include": ["*.config.mts", "rules/**/*"],
   "exclude": ["node_modules"]
 }

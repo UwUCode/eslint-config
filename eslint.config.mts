@@ -7,10 +7,19 @@ import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
+import { importExtensionsRule } from "./rules/importExtensions.mjs";
+
+const importPluginWithFixer = {
+    ...importPlugin,
+    rules: {
+        ...importPlugin.rules,
+        extensions: importExtensionsRule,
+    },
+};
+
 const files = ["**/*.ts", "**/*.mts", "**/*.cts"];
 const typeCheckedConfigs = tseslint.configs.strictTypeChecked.map(config => ({
     ...config,
-
     files,
 }));
 
@@ -44,7 +53,7 @@ export default defineConfig(
         },
         plugins: {
             "@stylistic": stylistic,
-            "import": importPlugin,
+            "import": importPluginWithFixer,
             unicorn,
             "unused-imports": unusedImports,
         },

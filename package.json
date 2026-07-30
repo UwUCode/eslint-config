@@ -1,6 +1,6 @@
 {
   "name": "@uwu-codes/eslint-config",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "My eslint config for my projects.",
   "packageManager": "bun@1.3.10",
   "module": "dist/eslint.config.mjs",
@@ -8,11 +8,17 @@
   "exports": {
     ".": {
       "import": "./dist/eslint.config.mjs"
+    },
+    "./bun": {
+      "import": "./dist/bun.config.mjs"
+    },
+    "./node": {
+      "import": "./dist/node.config.mjs"
     }
   },
   "scripts": {
     "prepare": "bun run build",
-    "build": "bun build eslint.config.mts --target=node --format=esm --outfile=dist/eslint.config.mjs --packages external && tsc",
+    "build": "bun build eslint.config.mts --target=node --format=esm --outfile=dist/eslint.config.mjs --packages external && bun build bun.config.mts --target=node --format=esm --outfile=dist/bun.config.mjs --packages external && bun build node.config.mts --target=node --format=esm --outfile=dist/node.config.mjs --packages external && tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "release": "./release.sh"
