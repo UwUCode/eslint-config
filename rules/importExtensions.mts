@@ -1,3 +1,6 @@
+import { existsSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+
 import importPlugin from "eslint-plugin-import";
 
 import type { Rule } from "eslint";
@@ -47,6 +50,16 @@ function removeFixOption(options: ReadonlyArray<unknown>): Array<unknown> {
     });
 }
 
+// .tsx files would otherwise get fixed to .ts
+function resolveFallback(context: Rule.RuleContext, path: string, fallbackExtension: string | undefined): string | undefined {
+    if (fallbackExtension !== "ts" || !path.startsWith(".")) {
+        return fallbackExtension;
+    }
+
+    const base = resolve(dirname(context.filename), path);
+    return !existsSync(`${base}.ts`) && existsSync(`${base}.tsx`) ? "tsx" : fallbackExtension;
+}
+
 function makeFix(
     context: Rule.RuleContext,
     source: SourceNode,
@@ -67,7 +80,7 @@ function makeFix(
     const queryIndex = sourceValue.search(/[?#]/);
     const path = queryIndex === -1 ? sourceValue : sourceValue.slice(0, queryIndex);
     const suffix = queryIndex === -1 ? "" : sourceValue.slice(queryIndex);
-    const missingExtension = /^Missing file extension "([^"]+)"/.exec(message)?.[1] ?? fallbackExtension;
+    const missingExtension = /^Missing file extension "([^"]+)"/.exec(message)?.[1] ?? resolveFallback(context, path, fallbackExtension);
     const unexpectedExtension = /^Unexpected use of file extension "([^"]+)"/.exec(message)?.[1];
 
     let fixedPath: string | undefined;

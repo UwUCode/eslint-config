@@ -17,8 +17,11 @@ const importPluginWithFixer = {
     },
 };
 
-const files = ["**/*.ts", "**/*.mts", "**/*.cts"];
-const typeCheckedConfigs = tseslint.configs.strictTypeChecked.map(config => ({
+export const files = ["**/*.ts", "**/*.mts", "**/*.cts", "**/*.tsx"];
+const typeCheckedConfigs = [
+    ...tseslint.configs.strictTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked,
+].map(config => ({
     ...config,
     files,
 }));
@@ -29,7 +32,6 @@ export default defineConfig(
     },
     js.configs.recommended,
     ...typeCheckedConfigs,
-    tseslint.configs.stylisticTypeChecked,
     stylistic.configs.customize({
         indent: 4,
         quotes: "double",
@@ -38,6 +40,16 @@ export default defineConfig(
         quoteProps: "consistent-as-needed",
         commaDangle: "always-multiline",
     }),
+    {
+        files: ["**/*.jsx"],
+        languageOptions: {
+            // espree's scope analysis doesn't count JSX usage, so unused var checks break
+            parser: tseslint.parser,
+            parserOptions: {
+                ecmaFeatures: { jsx: true },
+            },
+        },
+    },
     {
         files,
         languageOptions: {
