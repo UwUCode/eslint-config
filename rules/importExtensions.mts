@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 
-import importPlugin from "eslint-plugin-import";
+import { rules } from "eslint-plugin-import-x";
 
 import type { Rule } from "eslint";
 
@@ -15,9 +15,9 @@ interface SourceNode {
     value?: unknown;
 }
 
-const extensionsRule = importPlugin.rules.extensions;
+const extensionsRule = rules.extensions as unknown as Rule.RuleModule | undefined;
 if (extensionsRule === undefined) {
-    throw new Error("import/extensions rule not found in eslint-plugin-import");
+    throw new Error("extensions rule not found in eslint-plugin-import-x");
 }
 
 function getFixOption(options: ReadonlyArray<unknown>): boolean {
@@ -63,7 +63,7 @@ function resolveFallback(context: Rule.RuleContext, path: string, fallbackExtens
 function makeFix(
     context: Rule.RuleContext,
     source: SourceNode,
-    message: string,
+    report: { data?: { extension?: unknown }; messageId?: string },
     fallbackExtension: string | undefined,
 ): Rule.ReportFixer | undefined {
     if (typeof source.value !== "string" || source.range === undefined) {
@@ -80,8 +80,9 @@ function makeFix(
     const queryIndex = sourceValue.search(/[?#]/);
     const path = queryIndex === -1 ? sourceValue : sourceValue.slice(0, queryIndex);
     const suffix = queryIndex === -1 ? "" : sourceValue.slice(queryIndex);
-    const missingExtension = /^Missing file extension "([^"]+)"/.exec(message)?.[1] ?? resolveFallback(context, path, fallbackExtension);
-    const unexpectedExtension = /^Unexpected use of file extension "([^"]+)"/.exec(message)?.[1];
+    const extension = typeof report.data?.extension === "string" ? report.data.extension : undefined;
+    const missingExtension = report.messageId === "missingKnown" ? extension : report.messageId === "missing" ? resolveFallback(context, path, fallbackExtension) : undefined;
+    const unexpectedExtension = report.messageId === "unexpected" ? extension : undefined;
 
     let fixedPath: string | undefined;
     if (missingExtension !== undefined && path.length > 0) {
@@ -103,6 +104,8 @@ export const importExtensionsRule = {
     meta: {
         ...extensionsRule.meta,
         fixable: "code",
+        // the upstream schema doesn't know about fixExtension. the wrapped rule still checks its own options when it runs
+        schema: false,
     },
     create(context: Rule.RuleContext) {
         const fix = getFixOption(context.options);
@@ -121,10 +124,11 @@ export const importExtensionsRule = {
                 }
 
                 const report = descriptor as Rule.ReportDescriptor & {
-                    message: string;
+                    data?: { extension?: unknown };
+                    messageId?: string;
                     node: SourceNode;
                 };
-                const reportFix = makeFix(context, report.node, report.message, fixExtension);
+                const reportFix = makeFix(context, report.node, report, fixExtension);
                 context.report(reportFix === undefined ? descriptor : { ...descriptor, fix: reportFix });
             },
         });
@@ -132,7 +136,3 @@ export const importExtensionsRule = {
         return extensionsRule.create(ruleContext);
     },
 } as unknown as Rule.RuleModule;
-
-// The upstream rule's schema does not know about our `fix` option. The
-// wrapped rule still validates its policy options when it is executed.
-Object.assign(importExtensionsRule, { schema: [{ type: "array" }] });

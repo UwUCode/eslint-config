@@ -1,7 +1,7 @@
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import { defineConfig } from "eslint/config";
-import importPlugin from "eslint-plugin-import";
+import { importX } from "eslint-plugin-import-x";
 import unicorn from "eslint-plugin-unicorn";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
@@ -9,13 +9,17 @@ import tseslint from "typescript-eslint";
 
 import { importExtensionsRule } from "./rules/importExtensions.mjs";
 
+import type { ESLint } from "eslint";
+
+// import-x, registered as import so rule names and disable comments in projects don't change
+// its rules are typed with typescript-eslint's rule type, which eslint's plugin type doesn't accept
 const importPluginWithFixer = {
-    ...importPlugin,
+    ...importX,
     rules: {
-        ...importPlugin.rules,
+        ...importX.rules,
         extensions: importExtensionsRule,
     },
-};
+} as unknown as ESLint.Plugin;
 
 export const files = ["**/*.ts", "**/*.mts", "**/*.cts", "**/*.tsx"];
 const typeCheckedConfigs = [
@@ -83,6 +87,8 @@ export default defineConfig(
                 },
             }],
             "@stylistic/multiline-ternary": "off",
+            // new in @stylistic 6, it wants every item on its own line once a list wraps
+            "@stylistic/list-style": "off",
             "@typescript-eslint/array-type": ["error", { default: "generic" }],
             "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
             "@typescript-eslint/consistent-type-assertions": [
